@@ -1,0 +1,15 @@
+# Docksmithfile — Sample application
+# Demonstrates all supported instructions.
+
+FROM busybox:latest
+
+WORKDIR /app
+
+ENV APP_NAME=docksmith-hello
+ENV VERSION=1.0.0
+
+COPY hello.sh /app/hello.sh
+
+RUN chmod +x /app/hello.sh
+
+CMD ["/bin/sh", "/app/hello.sh"]
